@@ -91,7 +91,6 @@ const movies_tvShows = [
             "name": "Niki Marvin"
           }
         ],
-        "createdBy": "<user_id>"
       }
 ]
 
