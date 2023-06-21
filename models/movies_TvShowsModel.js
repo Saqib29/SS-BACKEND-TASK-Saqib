@@ -29,6 +29,8 @@ const movies_TvShowsSchema = new mongoose.Schema(
   {
     title: { type: String, required: true },
     runtime: { type: Number, required: true },
+    type: { type: String, enum: ['movie', 'tv show'], required: true },
+    genre: { type: String, required: true },
     actors: [actorSchema],
     directors: [directorSchema],
     producers: [producerSchema],
@@ -38,7 +40,7 @@ const movies_TvShowsSchema = new mongoose.Schema(
     timestamps: true,
     collection: 'movieORtvshows',
   }
-);
+)
 
 const Movies_TVshows = mongoose.model('Movies_TVshows', movies_TvShowsSchema);
 
