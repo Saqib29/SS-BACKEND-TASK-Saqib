@@ -1,11 +1,12 @@
 import User from '../models/userModel.js'
 import bcrypt from 'bcryptjs'
+import generateToken from '../utils/generateToken.js'
 
 // @desc    New user registration 
 // @route   POST /api/users/register
 // @access  public
 const userRegistration = async (req, res) => {
-    const { name, email, password } = req.body
+    const { name, email, password, isAdmin } = req.body
 
     try {
         const existingUser = await User.findOne({ email })
@@ -16,9 +17,10 @@ const userRegistration = async (req, res) => {
 
         const hashedPassword = await bcrypt.hash(password, 10)
 
-        const user = new User({ name, email, password: hashedPassword })
+        const user = new User({ name, email, password: hashedPassword, isAdmin })
         await user.save()
 
+        res.cookie('token', generateToken(user._id, user.email), { httpOnly: true })
         res.status(201).json({
             _id: user._id,
             name: user.name,
@@ -44,6 +46,8 @@ const userLogin = async (req, res) => {
         const user = await User.findOne({ email })
 
         if (user && (await user.matchPassword(password))) {
+
+            res.cookie('token', generateToken(user._id, user.email), { httpOnly: true })
             res.json({
                 _id: user._id,
                 name: user.name,
