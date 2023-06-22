@@ -1,5 +1,6 @@
 import express from 'express'
 import dotenv from 'dotenv'
+import cookieParser from 'cookie-parser'
 import connectDB from './config/db.js'
 import moviesTVShwosRoute from './routes/movies_tvshowsRoutes.js'
 import userRoutes from './routes/userRoutes.js'
@@ -9,7 +10,9 @@ const app = express()
 dotenv.config()
 connectDB()
 
+// middlewares
 app.use(express.json())
+app.use(cookieParser())
 
 // Routes
 app.use('/api/movies-and-tv-shows', moviesTVShwosRoute)
