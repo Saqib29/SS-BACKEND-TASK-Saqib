@@ -1,0 +1,192 @@
+{
+	"info": {
+		"_postman_id": "5e001e2d-7318-4292-b813-68221eb830c5",
+		"name": "Movie?TV Show API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13277366"
+	},
+	"item": [
+		{
+			"name": "/api/movies-and-tv-shows",
+			"item": [
+				{
+					"name": "GET /api/movies-and-tv-shows",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/movies-and-tv-shows",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"movies-and-tv-shows"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /api/movies-and-tv-shows/byId/:id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/movies-and-tv-shows/byId/649804f12d79898f2664bc58",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"movies-and-tv-shows",
+								"byId",
+								"649804f12d79898f2664bc58"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST /api/movies-and-tv-shows/add-new",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Inception\",\r\n  \"runtime\": 175,\r\n  \"type\": \"movie\",\r\n  \"genre\": \"Sci-Fi, Advanture\",\r\n  \"actors\": [\r\n    { \"name\": \"Leonardo Dicaprio\" }\r\n  ],\r\n  \"producers\": [{ \"name\": \"James Cameron\" }, { \"name\": \"Jon Landau\" }, { \"name\": \"Rae Sanchini\" }],\r\n  \"directors\": [{ \"name\": \"James Cameron\" }],\r\n  \"createdBy\": \"6497ca7ea439c1ae85e9d58a\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/movies-and-tv-shows/add-new",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"movies-and-tv-shows",
+								"add-new"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "/api/users",
+			"item": [
+				{
+					"name": "GET /api/users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/users",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /api/users/byId/:id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/users/byId/6497ca96a439c1ae85e9d58d",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"byId",
+								"6497ca96a439c1ae85e9d58d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST /api/users/login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"saqib@email.com\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/users/login",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST /api/users/register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Saqib\",\r\n    \"email\": \"saqib@email.com\",\r\n    \"password\": \"123456\",\r\n    \"isAdmin\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/users/register",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
