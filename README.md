@@ -73,3 +73,12 @@ You will then be able to see some data in your database.
 
 
 **NOTE**: API requests file attached named [Movie-TV Show API.postman_collection.json](./Movie-TV%20Show%20API.postman_collection.json). To test all the APIs, please import this file into Postman.
+
+***note***: This project is implemented using an Express REST API. Additionally, an attempt was made to implement GraphQL in the branch [version-2/apply_graphql](https://github.com/Saqib29/SS-BACKEND-TASK-Saqib/tree/version-2/apply_graphql). However, the GraphQL implementation could not be completed due to time constraints.
+
+
+- Implementation done so far:
+  - Framewrok: Express.js (used current LTS of Node.js)
+  - Database: MOngoDB
+  - Design Pattern: MVC pattern
+  - For authentication: JWT and cookie-parser
