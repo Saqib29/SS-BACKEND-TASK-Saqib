@@ -70,3 +70,6 @@ You will then be able to see some data in your database.
 
 - Authentication and authorization are implemented using JSON Web Token (JWT) with cookie-based authentication.
 - Custom error handling middleware is implemented for error handling.
+
+
+**NOTE**: API requests file attached named [Movie-TV Show API.postman_collection.json](./Movie-TV%20Show%20API.postman_collection.json). To test all the APIs, please import this file into Postman.
