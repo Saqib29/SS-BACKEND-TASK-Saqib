@@ -1,5 +1,5 @@
 import express from 'express'
-import { addNewMoviesORTVShows, getAllMoviesAndTVShows, getById } from '../controllers/movie_tv_showsController.js'
+import { addNewMoviesORTVShows, getAllMoviesAndTVShows, getMovieById } from '../controllers/movie_tv_showsController.js'
 import { authentication } from '../middleware/authMiddleware.js'
 
 const router = express.Router()
